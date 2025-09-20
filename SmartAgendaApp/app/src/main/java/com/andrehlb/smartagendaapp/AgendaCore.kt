@@ -11,7 +11,7 @@ data class Contact(
 )
 
 // Classe ou objeto que vai gerenciar os contatos da agenda
-object AgendaCore { // usando um object (singleton) para simplificar o acesso
+object AgendaManager { // usando um object (singleton) para simplificar o acesso
      private val contacts = mutableListOf<Contact>()
 
     fun addContact(name: String, isFavorite: Boolean, phoneNumber: String = "Sem número") {
@@ -71,4 +71,14 @@ fun main() {
     println("🚀 TESTES DA AGENDA INTELIGENTE (CONSOLE) INICIADO 🚀")
     println("===================================================")
 
-    // Usando o
+    // Usando o AgendaManager para adicionar contatos
+    AgendaManager.addContact("Alice Wonderland", true, "111-2222")
+    AgendaManager.addContact("Bob The Builder", false)
+    AgendaManager.addContact("Carol Danvers", true, "333-4444")
+    AgendaManager.addContact("David Copperfield", true, "555-NO-NUM")
+    AgendaManager.addContact("Zelda Fitz", false, "555-9999")
+    AgendaManager.addContact("alice wonderland", true, "111-0000") // Testando duplicidade (case-insensitive)
+    AgendaManager.addContact("", true) // Testando nome vazio
+
+    AgendaManager.listAllContactsDetails()
+
