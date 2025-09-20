@@ -81,4 +81,4 @@ fun main() {
     AgendaManager.addContact("", true) // Testando nome vazio
 
     AgendaManager.listAllContactsDetails()
-
+}
