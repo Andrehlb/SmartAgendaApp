@@ -81,4 +81,12 @@ fun main() {
     AgendaManager.addContact("", true) // Testando nome vazio
 
     AgendaManager.listAllContactsDetails()
+
+    println("\n--- Nomes dos Favoritos (Ordenados) ---")
+    val favoriteNames = AgendaManager.listFavoriteNames()
+    if (favoriteNames.isEmpty()) {
+        println("Nenhum contato favorito encontrado.")
+    } else {
+        favoriteNames.forEach { println("- $it") }
+    }
 }
