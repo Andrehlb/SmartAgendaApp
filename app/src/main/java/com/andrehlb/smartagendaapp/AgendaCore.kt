@@ -97,4 +97,12 @@ fun main() {
         println("Contatos encontrados com 'Alice':")
         foundAlice.forEach { println("  -> ${it.name} (Favorito: ${it.isFavorite})") }
     }
+    println("\n--- Buscando por 'xyz' (não existente) ---")
+    val foundXYZ = AgendaManager.findContactByName("xyz")
+    if (foundXYZ.isEmpty()) {
+        println("Nenhum contato encontrado com 'xyz'.")
+    } else {
+        // Este bloco não deve ser executado
+        println("Contatos encontrados com 'xyz': ${foundXYZ.joinToString { it.name }}")
+    }
 }
