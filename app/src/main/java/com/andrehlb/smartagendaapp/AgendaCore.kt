@@ -15,8 +15,9 @@ object AgendaManager { // usando um object (singleton) para simplificar o acesso
      private val contacts = mutableListOf<Contact>()
 
     fun addContact(name: String, isFavorite: Boolean, phoneNumber: String = "Sem número") {
-        if (name.isBlank()) {
-            println("Aviso: Este contato '$name' já existe. Fique tranquilo, não será adicionado de novo.")
+        if (name.isBlank()) { // é para verificar se o nome está vazio, em branco ou só com espaços
+            println("Ops! O nome do contato não pode ficar vazio. Contato não adicionado, tente de novo.")
+            // println("Aviso: Este contato '$name' já existe. Fique tranquilo, não será adicionado de novo.")
         }
         val existingContact = contacts.find { it.name.equals(name, ignoreCase = true) }
         if (existingContact != null) {
