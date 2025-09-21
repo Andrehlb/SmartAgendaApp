@@ -89,4 +89,12 @@ fun main() {
     } else {
         favoriteNames.forEach { println("- $it") }
     }
+    println("\n--- Buscando por 'Alice' ---")
+    val foundAlice = AgendaManager.findContactByName("Alice")
+    if (foundAlice.isEmpty()) {
+        println("Nenhum contato encontrado com 'Alice'.")
+    } else {
+        println("Contatos encontrados com 'Alice':")
+        foundAlice.forEach { println("  -> ${it.name} (Favorito: ${it.isFavorite})") }
+    }
 }
