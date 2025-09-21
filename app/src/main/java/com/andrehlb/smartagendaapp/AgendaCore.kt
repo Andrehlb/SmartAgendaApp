@@ -18,14 +18,15 @@ object AgendaManager { // usando um object (singleton) para simplificar o acesso
         if (name.isBlank()) { // é para verificar se o nome está vazio, em branco ou só com espaços
             println("Ops! O nome do contato não pode ficar vazio. Contato não adicionado, tente de novo.")
             // println("Aviso: Este contato '$name' já existe. Fique tranquilo, não será adicionado de novo.")
+            return // Sai da função sem adicionar o contato
         }
         val existingContact = contacts.find { it.name.equals(name, ignoreCase = true) }
         if (existingContact != null) {
-            println("Aviso: Este contato '$name' já existe. Fique tranquilo, não será adicionado de novo.")
+            println("Aviso ⚠\uFE0F: Este contato '$name' já existe. Fique tranquilo, não será adicionado de novo.")
         } else {
             val newContact = Contact(name = name, phoneNumber = phoneNumber, isFavorite = isFavorite)
             contacts.add(newContact)
-            println("Muito bem! O contato '$name' foi adicionado com sucesso!")
+            println("Muito bem! \uD83D\uDC4F O contato '$name' foi adicionado com sucesso!")
         }
     }
     fun listAllContactsDetails() {
