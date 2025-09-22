@@ -22,11 +22,11 @@ object AgendaManager { // usando um object (singleton) para simplificar o acesso
         }
         val existingContact = contacts.find { it.name.equals(name, ignoreCase = true) }
         if (existingContact != null) {
-            println("Aviso ⚠\uFE0F: Este contato '$name' já existe. Fique tranquilo, não será adicionado de novo.")
+            println("Aviso: Este contato '$name' já existe. Fique tranquilo, não será adicionado de novo.")
         } else {
             val newContact = Contact(name = name, phoneNumber = phoneNumber, isFavorite = isFavorite)
             contacts.add(newContact)
-            println("Muito bem! \uD83D\uDC4F O contato '$name' foi adicionado com sucesso!")
+            println("Muito bem! O contato '$name' foi adicionado com sucesso!")
         }
     }
     fun listAllContactsDetails() {
@@ -36,7 +36,7 @@ object AgendaManager { // usando um object (singleton) para simplificar o acesso
         }
         println("\n--- Lista de Todos os Contatos ---")
         contacts.forEachIndexed { index, contact ->
-            val favStatus = if (contact.isFavorite) "🌟 Favorito" else "😐 Comum"
+            val favStatus = if (contact.isFavorite) "Favorito" else " Comum"
             println("${index + 1}. Nome: ${contact.name}, Tel: ${contact.phoneNumber}, Status: $favStatus")
         }
     }
@@ -69,9 +69,9 @@ object AgendaManager { // usando um object (singleton) para simplificar o acesso
 
 // Testando a lógica no console, usando a função main
 fun main() {
-    //System.setOut(java.io.PrintStream(System.out, true, "UTF-8"))
+    System.setOut(java.io.PrintStream(System.out, true, "UTF-8"))
     println("===================================================")
-    println("🚀 TESTES DA AGENDA INTELIGENTE (CONSOLE) INICIADO 🚀")
+    println(" TESTES DA AGENDA INTELIGENTE (CONSOLE) INICIADO ")
     println("===================================================")
 
     // Usando o AgendaManager para adicionar contatos
