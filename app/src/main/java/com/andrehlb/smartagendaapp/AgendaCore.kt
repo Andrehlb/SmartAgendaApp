@@ -1,6 +1,6 @@
 package com.andrehlb.smartagendaapp
 
-import androidx.compose.ui.geometry.isEmpty
+// import androidx.compose.ui.geometry.isEmpty
 
 // Lógica principal da Agenda Inteligente (sem interface de usuário)
 data class Contact(
@@ -69,6 +69,7 @@ object AgendaManager { // usando um object (singleton) para simplificar o acesso
 
 // Testando a lógica no console, usando a função main
 fun main() {
+    //System.setOut(java.io.PrintStream(System.out, true, "UTF-8"))
     println("===================================================")
     println("🚀 TESTES DA AGENDA INTELIGENTE (CONSOLE) INICIADO 🚀")
     println("===================================================")

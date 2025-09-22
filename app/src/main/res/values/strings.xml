@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SmartAgendaApp</string>
+    <string name="emoji_text_view">%1$s Olá, mundo!</string>
 </resources>
