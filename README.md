@@ -1,5 +1,3 @@
-# 🚀 Desafio de Prática – Agenda Inteligente em Kotlin
-
 ## 🎯 Desafio Proposto
 
 > 🚀 **Desafio de Prática – Agenda Inteligente em Kotlin**  
