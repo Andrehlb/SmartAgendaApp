@@ -74,6 +74,9 @@ fun main() {
     println(" TESTES DA AGENDA INTELIGENTE (CONSOLE) INICIADO ")
     println("===================================================")
 
+    // Chamando  a função aqui
+    AgendaManager.sendMessage("Bem-vindo à Agenda Inteligente!")
+
     // Usando o AgendaManager para adicionar contatos
     AgendaManager.addContact("Alice Wonderland", true, "111-2222")
     AgendaManager.addContact("Bob The Builder", false)
